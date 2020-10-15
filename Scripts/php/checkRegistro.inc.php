@@ -56,8 +56,7 @@ class checkRegistro {
         if(!$this->variableIniciable($tel)){
             return "Debes de escribir un numero";
         } else {
-            $Pin = new Pin($tel, Pin::NUM_TEL);
-            if($Pin->Verify()){
+            if(strlen($tel) === 10){
                 $this->tel = $tel;
                 return "";
             }
