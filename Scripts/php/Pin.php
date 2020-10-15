@@ -7,7 +7,7 @@ class Pin {
     
     private $pin = 0, $mode = 0;
     
-    function __construc($pin , $mode){
+    function __construc($pin, $mode){
         $this->$pin = $pin;
         $this->$mode = $mode;
     }
