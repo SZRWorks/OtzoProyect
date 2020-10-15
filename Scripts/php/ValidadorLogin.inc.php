@@ -18,7 +18,7 @@ class ValidadorLogin{
             if(is_null($this->usuario) || !password_verify($clave, $this->usuario-> getPassword())){
                 $this-> error = "Datos Incorrectos";
             }else{
-                $this-> error="";
+                $this-> error="Todo Bien";
             }
         }
     }

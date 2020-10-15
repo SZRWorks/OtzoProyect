@@ -35,7 +35,7 @@ CREATE TABLE `Usuarios` (
   `Correo` varchar(100) UNIQUE,
   `Domicilio` varchar(100),
   `Telefono` INT(10),
-  `Password` varchar(60)
+  `Password` varchar(255)
 );
 
 

@@ -6,6 +6,8 @@ include_once 'Scripts/php/RepositorioUsuario.inc.php';
 include_once 'Scripts/php/ValidadorLogin.inc.php';
 include_once 'Scripts/php/ControlSesion.inc.php';
 
+
+
 if (ControlSesion::sesionIniciada()){
     Redireccion::redirigir(SERVIDOR);
 }
@@ -15,12 +17,11 @@ if(isset($_POST['login'])){
     
     $validador = new ValidadorLogin($_POST['email'], $_POST['clave'], Conexion :: getConexion());
 
-    if(!$validador -> getError() == "" && !is_null($validador -> getUsuario())){
+    if(!is_null($validador -> getUsuario())){
        ControlSesion :: IniciarSesion($validador -> getUsuario() -> getId(), $validador -> getUsuario() -> getNombre());
        Redireccion::redirigir(SERVIDOR);
-    echo "Inicio Sesion Exitosa!";
-  
-        
+    } else {
+        echo $validador->getError();
     }
 
     Conexion :: cerrarConexion();

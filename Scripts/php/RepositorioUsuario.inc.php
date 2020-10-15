@@ -156,7 +156,7 @@ class RepositorioUsuario{
                 
                 $resultado = $sentencia->fetch();
 
-                $usuario = (!empty($resultado))? new Usuario($resultado['id'], $resultado['nombre'], $resultado['Apellido_P'], $resultado['Apellido_M'], $resultado['email'], $resultado['Domicilio'], $resultado['Telefono'], $resultado['password']) : null;
+                $usuario = (!empty($resultado))? new Usuario($resultado['id_Usuario'], $resultado['Nombre'], $resultado['Apellido_P'], $resultado['Apellido_M'], $resultado['Correo'], $resultado['Domicilio'], $resultado['Telefono'], $resultado['Password']) : null;
             } catch (PDOException $ex) {
                 print "ERROR: ". $ex ->getMessage() . "<br>";
             }
