@@ -1,3 +1,3 @@
 # OtzoProyect
 
-Repositorio para cumplir las exigensias de YoungDemetrio.
+Repositorio para cumplir las exigencias de YoungDemetrio.
