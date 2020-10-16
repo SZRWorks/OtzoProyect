@@ -1,11 +1,6 @@
 <?php include_once 'Templates/main_layout.php'; ?>
 
 
-<!-- Aplica un titulo a la main_layout -->
-<?php startblock("Title"); ?>
-    Otzo | Registro Completo!
-<?php endblock(); ?>
-
 <!-- Aplica el login dentro de la main_layout -->
 <?php startblock("Body"); ?>
 

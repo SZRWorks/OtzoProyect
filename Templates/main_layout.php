@@ -1,42 +1,26 @@
-<?php include_once 'Scripts/php/ti.php';?> 
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Script que me ayuda a que esto se paresca mas a flask ;D -->
+<?php
 
-  <title> 
-    <?php startblock("Title"); ?>
-    <?php endblock(); ?>
-  </title>
+include_once 'Scripts/php/ti.php';
+include_once 'Templates/1-Apertura.inc.php';
 
-  <!-- Get bootstrap -->
-  <link rel="stylesheet" href="Scripts/css/bootstrap.min.css">
+?>
 
-  <link rel="stylesheet" href="Scripts/css/main.css">
 
-  <!-- Chart Css and JScript -->
-  <link rel="stylesheet" href="Scripts/css/Chart.min.css">
-  <script src="Scripts/js/Chart.min.js"></script>
-</head>
 
 <body>
   <div class="d-flex" id="wrapper">
 
     <!-- Sidebar -->
     <div class="bg-light border-right shadow" id="sidebar-wrapper">
+
+      <!-- Cabecera del Sidebar -->
       <div class="sidebar-heading bg-info" style="align-content: center;">
-
-        <!-- User icon
-        {% if session['username'] %}
-        <a href="/account/{{ session['username'] }}">
-          {% endif %}
-
-          {% if session['username'] %}
-          {% endif %}
-          -->
+          <!-- Icono del usuario. -->
           <img class="icon-shape-sr shadow" src="Imagenes/EPICFoxIcon.gif" width="200px" height="200px">
 
-          <!-- User name -->
+          <!-- Nombre del usuario -->
           <div align="center" class="text-primary" id="username-lb" style="
                   font-weight: bold; font-size: 30px;
                   text-shadow: 2px 0 0 #fff,
@@ -49,15 +33,14 @@
                   -1px 1px 0 #fff;">
             TestUser
           </div>
-
       </div>
 
+      <!-- Pequeño Separador -->
       <hr class="bg-info">
 
       <!-- Sidebar Buttons -->
       <div class="list-group list-group-flush">
-
-        <!-- Entretainment -->
+        <!-- Boton Entretainment -->
         <Button class="btn btn-success" style="height: 55px; margin: 5px; margin-bottom: 20px;"
           onclick="location.href = '/entertainment'">
           <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-controller" fill="currentColor"
@@ -77,7 +60,7 @@
           </svg>
         </Button>
 
-        <!-- Game of learn -->
+        <!-- Boton Game of learn -->
         <Button class="btn btn-info" style="height: 55px; margin: 5px; margin-bottom: 20px;"
           onclick="location.href = '/learn'">
           <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-book" fill="currentColor"
@@ -95,7 +78,7 @@
           </svg>
         </Button>
 
-        <!-- Social contribution -->
+        <!-- Boton Social contribution -->
         <Button class="btn btn-danger" style="height: 55px; margin: 5px; margin-bottom: 20px;"
           onclick="location.href = '/socialcontribution'">
           <svg width="1.8em" height="1.8em" viewBox="0 0 16 16" class="bi bi-emoji-sunglasses" fill="currentColor"
@@ -114,7 +97,7 @@
           </svg>
         </Button>
 
-        <!-- Technical contribution -->
+        <!-- Boton Technical contribution -->
         <Button class="btn btn-dark" style="height: 55px; margin: 5px; margin-bottom: 20px;"
           onclick="location.href = '/technicalcontribution'">
           <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-hammer" fill="currentColor"
@@ -135,13 +118,13 @@
     </div>
 
 
-    <!-- Page Content -->
     <div id="page-content-wrapper">
       <nav class="navbar navbar-expand-lg navbar-light bg-primary border-bottom shadow">
         <button class="btn btn-secondary" id="menu-toggle">
           <span class="navbar-toggler-icon"></span>
         </button>
 
+        <!-- Pestaña de creditos -->
         <span class="badge badge-warning align-bottom" style="margin-left: 10px; height: 30px;">
           <svg width="2.5em" height="2.5em" viewBox="0 0 16 16" class="bi bi-cash-stack" fill="currentColor"
             xmlns="http://www.w3.org/2000/svg">
@@ -154,6 +137,7 @@
           Credits: $$
         </span>
 
+        <!-- Boton para desplazar Sidebar -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -206,50 +190,30 @@
                 </svg>
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <!-- Opciones de el boton More -->
                 <a class="dropdown-item text-primary" href="/OtzoProyect/styled_register.php">Sing Up</a>
                 <a class="dropdown-item text-success" href="/OtzoProyect/styled_login.php">Login</a>
-                <!-- <a class="dropdown-item text-danger" href="/login">Close Session</a> -->
-                <!--
-                {% if not session['username'] %}
-                <a class="dropdown-item text-primary" href="/singup">Sing Up</a>
-                <a class="dropdown-item text-success" href="/login">Log In</a>
-
-                {% else %}
-                <a class="dropdown-item text-success" href="/account/TestUser">My Account</a>
-
-                {% endif %}
-                {% if session['username'] %}
-                <div class="dropdown-divider bg-warning"></div>
-                <a class="dropdown-item bg-danger text-light" href="/logout">
-                  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-box-arrow-left" fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                      d="M4.354 11.354a.5.5 0 0 0 0-.708L1.707 8l2.647-2.646a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708 0z" />
-                    <path fill-rule="evenodd" d="M11.5 8a.5.5 0 0 0-.5-.5H2a.5.5 0 0 0 0 1h9a.5.5 0 0 0 .5-.5z" />
-                    <path fill-rule="evenodd"
-                      d="M14 13.5a1.5 1.5 0 0 0 1.5-1.5V4A1.5 1.5 0 0 0 14 2.5H7A1.5 1.5 0 0 0 5.5 4v1.5a.5.5 0 0 0 1 0V4a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5H7a.5.5 0 0 1-.5-.5v-1.5a.5.5 0 0 0-1 0V12A1.5 1.5 0 0 0 7 13.5h7z" />
-                  </svg> Close session
-                </a>
-                {% endif %}
-                -->
               </div>
             </li>
           </ul>
         </div>
       </nav>
 
+      <!-- Cuerpo de la pagina -->
       <div class="container-fluid">
+
         <!-- Body Layout -->
         <div class="container pt-4">
           <?php startblock("Body") ?>
           <?php endblock() ?>
           <br>
         </div>
+
       </div>
     </div>
   </div>
 
-  <!-- Self JScripts -->
+  <!-- Mis JScripts -->
   <script src="Scripts/js/main.js"></script>
 
   <!-- Bootstrap JScripts -->

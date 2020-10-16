@@ -1,11 +1,6 @@
 <?php include_once 'Templates/main_layout.php'; ?>
 
 
-<!-- Aplica un titulo a la main_layout -->
-<?php startblock("Title"); ?>
-    Otzo | SingUp
-<?php endblock(); ?>
-
 <!-- Aplica el register dentro de la main_layout -->
 <?php startblock("Body"); ?>
     <div align="center">

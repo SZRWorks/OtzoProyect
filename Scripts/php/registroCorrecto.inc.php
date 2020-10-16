@@ -12,8 +12,10 @@ if(isset($_GET['nombre']) && !empty($_GET['nombre'])){
 
 $titulo = "Registro Correcto!";
 
-include_once 'Templates/1-Apertura.inc.php';
-//include_once 'Templates/3-Navbar.inc.php';
+///// Remplazado en main_layout ////
+//include_once './Templates/1-Apertura.inc.php';
+
+
 ?>
 <div class="container">
     <div class="row">

@@ -31,8 +31,8 @@ if(isset($_POST['login'])){
 
 $titulo = 'Iniciar Sesion';
 
-include_once './Templates/1-Apertura.inc.php';
-//include_once 'Templates/3-Navbar.inc.php';
+///// Remplazado en main_layout ////
+//include_once './Templates/1-Apertura.inc.php';
 
 
 ?>
