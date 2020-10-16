@@ -1,9 +1,9 @@
 <?php
-include_once 'Scripts/php/conexion.inc.php';
-include_once 'Scripts/php/Usuario.inc.php';
-include_once 'Scripts/php/RepositorioUsuario.inc.php';
-include_once 'Scripts/php/checkRegistro.inc.php';
-include_once 'Scripts/php/Redireccion.inc.php';
+include_once 'Conexion.inc.php';
+include_once 'Usuario.inc.php';
+include_once 'RepositorioUsuario.inc.php';
+include_once 'checkRegistro.inc.php';
+include_once 'Redireccion.inc.php';
 
 
 
@@ -29,7 +29,7 @@ if (isset($_POST['enviar'])){
 
 $titulo = 'Registro';
 
-include_once 'Templates/1-Apertura.inc.php';
+include_once './Templates/1-Apertura.inc.php';
 //include_once 'Templates/3-Navbar.inc.php';
 
 ?>
@@ -75,5 +75,5 @@ include_once 'Templates/1-Apertura.inc.php';
 
     
 <?php
-    include_once 'Templates/2-Cierre.inc.php';
+    include_once './Templates/2-Cierre.inc.php';
  ?>

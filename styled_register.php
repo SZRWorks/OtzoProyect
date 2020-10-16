@@ -19,7 +19,7 @@
             
             <div class="card-body">
                 <!-- Agregar la platilla register de Claduio -->
-                <?php include_once 'Registro.php' ?>
+                <?php include_once 'Scripts/php/Registro.inc.php' ?>
             </div>
             
         </div>

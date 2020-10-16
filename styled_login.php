@@ -19,7 +19,7 @@
             
             <div class="card-body">
                 <!-- Agregar la platilla login de Claduio -->
-                <?php include_once 'login.php' ?>
+                <?php include_once 'Scripts/php/login.inc.php' ?>
             </div>
             
         </div>

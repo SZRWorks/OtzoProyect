@@ -1,10 +1,10 @@
 <?php
-include_once 'Scripts/php/config.inc.php';
-include_once 'Scripts/php/Conexion.inc.php';
-include_once 'Scripts/php/Redireccion.inc.php';
-include_once 'Scripts/php/RepositorioUsuario.inc.php';
-include_once 'Scripts/php/ValidadorLogin.inc.php';
-include_once 'Scripts/php/ControlSesion.inc.php';
+include_once 'config.inc.php';
+include_once 'Conexion.inc.php';
+include_once 'Redireccion.inc.php';
+include_once 'RepositorioUsuario.inc.php';
+include_once 'ValidadorLogin.inc.php';
+include_once 'ControlSesion.inc.php';
 
 if (ControlSesion::sesionIniciada()){
     Redireccion::redirigir(SERVIDOR);
@@ -31,7 +31,7 @@ if(isset($_POST['login'])){
 
 $titulo = 'Iniciar Sesion';
 
-include_once 'Templates/1-Apertura.inc.php';
+include_once './Templates/1-Apertura.inc.php';
 //include_once 'Templates/3-Navbar.inc.php';
 
 
@@ -61,5 +61,5 @@ include_once 'Templates/1-Apertura.inc.php';
         <p class="text-center">Necesitas ayuda con tu contraseña? <a href="#">Intentalo aqui</a></p>    
 </form>
  <?php
-    include_once 'Templates/2-Cierre.inc.php';
+    include_once './Templates/2-Cierre.inc.php';
   ?>
