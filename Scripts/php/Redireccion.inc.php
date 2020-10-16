@@ -7,3 +7,5 @@ class Redireccion{
         exit();
     }
 }
+
+?>

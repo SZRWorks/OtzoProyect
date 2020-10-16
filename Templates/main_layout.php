@@ -1,13 +1,16 @@
+<?php include_once 'Scripts/php/ti.php';?> 
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title> 
-  
+    <?php startblock("Title"); ?>
+    <?php endblock(); ?>
   </title>
 
   <!-- Get bootstrap -->
-  <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
+  <link rel="stylesheet" href="Scripts/css/bootstrap.min.css">
 
   <link rel="stylesheet" href="Scripts/css/main.css">
 
@@ -29,10 +32,9 @@
           {% endif %}
 
           {% if session['username'] %}
-          <img class="icon-shape-sr shadow" src="{{ url_for('static', filename=g.user_data.ImgRoute) }}" width="200px"
-            height="200px">
           {% endif %}
           -->
+          <img class="icon-shape-sr shadow" src="Imagenes/EPICFoxIcon.gif" width="200px" height="200px">
 
           <!-- User name -->
           <div align="center" class="text-primary" id="username-lb" style="
@@ -51,11 +53,6 @@
       </div>
 
       <hr class="bg-info">
-
-      <!-- Canvas for the pie chart -->
-      <div align="center"> <p class="h4 text-primary"> -Credits stats- </p> <canvas class="shadow text-dark" id="myChart" style="height: 150px; width: 150px;"></canvas> </div>
-
-      <hr class="bg-success">
 
       <!-- Sidebar Buttons -->
       <div class="list-group list-group-flush">
@@ -167,7 +164,7 @@
 
             <!-- Home button -->
             <li class="nav-item active text-primary">
-              <a class="btn btn-secondary nav-link" onclick="location.href = '#'"
+              <a class="btn btn-secondary nav-link" onclick="location.href = 'index.php'"
                 style="margin-left: 5px; margin-top: 2px;">
                 <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-house-fill text-primary" fill="currentColor"
                   xmlns="http://www.w3.org/2000/svg">
@@ -209,9 +206,9 @@
                 </svg>
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item text-primary" href="/account/TestUser">Hey soy un item :D</a>
-                <a class="dropdown-item text-success" href="/account/TestUser">Yo tambien :0</a>
-                <a class="dropdown-item text-danger" href="/login">Igual :3</a>
+                <a class="dropdown-item text-primary" href="/OtzoProyect/styled_register.php">Sing Up</a>
+                <a class="dropdown-item text-success" href="/OtzoProyect/styled_login.php">Login</a>
+                <!-- <a class="dropdown-item text-danger" href="/login">Close Session</a> -->
                 <!--
                 {% if not session['username'] %}
                 <a class="dropdown-item text-primary" href="/singup">Sing Up</a>
@@ -244,8 +241,8 @@
       <div class="container-fluid">
         <!-- Body Layout -->
         <div class="container pt-4">
-          <!--
-          -->
+          <?php startblock("Body") ?>
+          <?php endblock() ?>
           <br>
         </div>
       </div>

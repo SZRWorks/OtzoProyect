@@ -7,7 +7,7 @@ include_once 'Scripts/php/Redireccion.inc.php';
 if(isset($_GET['nombre']) && !empty($_GET['nombre'])){
     $nombre = $_GET['nombre'];
 }else{
-    Redireccion :: redirigir(SERVIDOR);
+    Redireccion :: redirigir('index.php');
 }
 
 $titulo = "Registro Correcto!";
@@ -25,7 +25,7 @@ include_once 'Templates/1-Apertura.inc.php';
                 <div class="panel-body text-center">
                     <p>Gracias por registrate <b><?php echo $nombre ?></b>!!</p>
                     <br>
-                    <p><a href="<?php echo RUTA_LOGIN ?>"> Inicia sesion Aqui!</a> para comenzar a usar tu cuenta</p>
+                    <p><a href="<?php echo 'styled_login.php' ?>"> Inicia sesion Aqui!</a> para comenzar a usar tu cuenta</p>
                 </div>
             </div>
         </div>

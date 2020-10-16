@@ -19,7 +19,8 @@ if (isset($_POST['enviar'])){
         
         if($usuarioInsertado){
             //Redirigir a registro-correcto
-            Redireccion::redirigir(RUTA_REGISTRO_CORRECTO. '?nombre='. $validador->getNombre());            
+            //Redireccion::redirigir(RUTA_REGISTRO_CORRECTO. '?nombre='. $validador->getNombre());
+            Redireccion::redirigir('registroCorrecto.php?nombre='.$validador->getNombre());            
         }  
     Conexion :: cerrarConexion();  
     }
@@ -32,11 +33,7 @@ include_once 'Templates/1-Apertura.inc.php';
 //include_once 'Templates/3-Navbar.inc.php';
 
 ?>
-<div class="container">
-    <div class="jumbotron">
-        <h1 class="text-center">Formulario de registro</h1>
-    </div>
-</div>
+
 
 <div class="container">
     <div class="row">
@@ -73,6 +70,7 @@ include_once 'Templates/1-Apertura.inc.php';
                 </div>
             </div>
         </div>
+    </div>
 </div>
 
     

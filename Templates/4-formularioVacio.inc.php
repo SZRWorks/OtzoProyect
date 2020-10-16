@@ -31,5 +31,5 @@
         <input type="password" class="form-control" name="clave2" placeholder="Repite la contrasena aqui!" >
     </div>
     <br>
-    <button type="reset" class="btn btn-default">Limpiar</button>   
-    <button type="submit" class="btn btn-default" name="enviar">Enviar datos</button>  
+    <button type="reset" class="btn btn-primary">Limpiar</button>   
+    <button type="submit" class="btn btn-success" name="enviar">Enviar datos</button>  
