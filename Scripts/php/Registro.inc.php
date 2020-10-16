@@ -72,8 +72,7 @@ $titulo = 'Registro';
         </div>
     </div>
 </div>
-
-    
+   
 <?php
     include_once './Templates/2-Cierre.inc.php';
  ?>
