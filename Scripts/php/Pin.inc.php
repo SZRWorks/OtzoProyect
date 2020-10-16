@@ -20,11 +20,13 @@ class Pin {
     }
 
     private function isValidTel(){
-        return preg_match("/\d{10}/", $this->getPin()) == 1;
+        $bandera = preg_match("/\d{10}/", $this->getPin()) >= 1;
+        return $bandera;
     }
     
     private function isValidCard(){
-        return preg_match("/\d{13,18}/", $this->getPin()) == 1;
+        $bandera = preg_match("/\d{13,18}/", $this->getPin()) >= 1;
+        return $bandera;
     }
     
     function getPin() {

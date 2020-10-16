@@ -12,6 +12,7 @@ class checkRegistro {
     private $errorEmail;
     private $errorClave1;
     private $errorClave2;
+    private $errorApellido1, $errorApellido2;
     private $errorTel;
     private $avisoInicio;
     private $avisoCierre;
@@ -32,6 +33,8 @@ class checkRegistro {
         $this->errorTel = $this->validarTel($tel);
         $this->errorNombre = $this->validarNombre($conexion, $nombre);
         $this->errorEmail = $this->validarEmail($conexion, $email);
+        $this->errorApellido1 = ($this->variableIniciable($ap))? $this->ap = $ap: "No valido!";
+        $this->errorApellido1 = ($this->variableIniciable($am))? $this->ap = $ap: "No valido!";
         $this->errorClave1 = $this->validarClave1($clave1);
         $this->errorClave2 = $this->validarClave2($clave1, $clave2);
 
@@ -53,8 +56,7 @@ class checkRegistro {
         if(!$this->variableIniciable($tel)){
             return "Debes de escribir un numero";
         } else {
-            $Pin = new Pin($tel, Pin::NUM_TEL);
-            if($Pin->Verify()){
+            if(strlen($tel) === 10){
                 $this->tel = $tel;
                 return "";
             }
