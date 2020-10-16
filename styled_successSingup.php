@@ -12,9 +12,8 @@
             
             <div class="card-body">
                 <!-- Agregar la platilla login de Claduio -->
-                <?php include_once 'registroCorrecto.php' ?>
+                <?php include_once 'Scripts/php/registroCorrecto.inc.php' ?>
             </div>
-            
         </div>
     </div>
 
