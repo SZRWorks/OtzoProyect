@@ -72,8 +72,7 @@ include_once './Templates/1-Apertura.inc.php';
         </div>
     </div>
 </div>
-
-    
+   
 <?php
     include_once './Templates/2-Cierre.inc.php';
  ?>
