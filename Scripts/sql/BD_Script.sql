@@ -11,6 +11,7 @@ CREATE TABLE `Marca` (
 CREATE TABLE `Producto` (
   `id_Producto` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `Imagen` longblob,
+   `Titulo` varchar,
   `id_Marca` INT, 
     FOREIGN KEY (id_Marca) REFERENCES Marca(id_Marca),
   `Descripcion` varchar(255),
@@ -46,3 +47,9 @@ CREATE TABLE `Pedidos` (
   `id_ProductoporMC` INT, FOREIGN KEY (id_ProductoporMC) REFERENCES McporProducto(id_MCporProducto),
   `Cantidad` INT
 );
+
+/*POBLAR BD */
+INSERT INTO marca (Nombre) VALUES ("Rik-Cola") , ("La Rosa") , ("Microsoft");
+INSERT INTO categoria (Nombre) VALUES ("Tecnologia"), ("Comida") , ("Varios");
+
+INSERT INTO Producto (Titulo, Imagen, id_Marca, Descirpcion, Precio)
