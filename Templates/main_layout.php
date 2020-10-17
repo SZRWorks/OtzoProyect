@@ -1,12 +1,10 @@
-
-<!-- Script que me ayuda a que esto se paresca mas a flask ;D -->
 <?php
+include_once 'Templates/1-Apertura.inc.php'; 
 
+// Script que me ayuda a que esto se paresca mas a flask ;D
 include_once 'Scripts/php/ti.php';
-include_once 'Templates/1-Apertura.inc.php';
 
 ?>
-
 
 
 <body>
