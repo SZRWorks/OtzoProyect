@@ -52,4 +52,7 @@ CREATE TABLE `Pedidos` (
 INSERT INTO marca (Nombre) VALUES ("Rik-Cola") , ("La Rosa") , ("Microsoft");
 INSERT INTO categoria (Nombre) VALUES ("Tecnologia"), ("Comida") , ("Varios");
 
-INSERT INTO Producto (Titulo, Imagen, id_Marca, Descirpcion, Precio)
+INSERT INTO Producto (Titulo, Imagen, id_Marca, Descirpcion, Precio, Precio, id_Categoria) VALUES ("Refresco", LOAD_FILE(DIR), "LALALAL", 100, 2);
+
+INSERT INTO mcporproducto (id_Marca, id_Categoria, id_Producto) 
+	SELECT e.id_Marca, e.id_Categoria, e.id_Producto FROM producto AS e ORDER BY e.id_Producto ASC;
