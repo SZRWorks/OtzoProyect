@@ -1,38 +1,3 @@
-<?php
-include_once 'Conexion.inc.php';
-include_once 'Usuario.inc.php';
-include_once 'RepositorioUsuario.inc.php';
-include_once 'checkRegistro.inc.php';
-include_once 'Redireccion.inc.php';
-
-
-
-if (isset($_POST['enviar'])){
-
-    Conexion :: abrirConexion();
-    
-    $validador = new checkRegistro($_POST['nombre'],$_POST['ap'],$_POST['am'],$_POST['email'], $_POST['dom'],$_POST['tel'] ,$_POST['clave1'],$_POST['clave2'], Conexion :: getConexion());
-
-    if($validador -> registroValido()){
-        $usuario = new Usuario('', $validador-> getNombre(), $validador-> getAp(), $validador -> getAm(), $validador-> getEmail(), $validador-> getDom(), $validador->getTel(), password_hash($validador-> getClave(), PASSWORD_DEFAULT));
-        $usuarioInsertado = RepositorioUsuario :: insertarUsuario(Conexion :: getConexion(), $usuario);
-        
-        if($usuarioInsertado){
-            //Redirigir a registro-correcto
-            //Redireccion::redirigir(RUTA_REGISTRO_CORRECTO. '?nombre='. $validador->getNombre());
-            Redireccion::redirigir('registroCorrecto.php?nombre='.$validador->getNombre());            
-        }  
-    Conexion :: cerrarConexion();  
-    }
-    
-}
-
-$titulo = 'Registro';
-
-///// Remplazado en main_layout ////
-//include_once './Templates/1-Apertura.inc.php';
-
-?>
 
 
 <div class="container">

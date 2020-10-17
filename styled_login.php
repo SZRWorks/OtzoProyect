@@ -30,9 +30,9 @@ $titulo = 'Iniciar Sesion';
 
 ///// Remplazado en main_layout ////
 //include_once './Templates/1-Apertura.inc.php';
-?>
 
-<?php include_once 'Templates/main_layout.php'; ?>
+include_once 'Templates/main_layout.php';
+?>
 
 
 <!-- Aplica el login dentro de la main_layout -->
