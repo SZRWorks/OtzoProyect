@@ -14,6 +14,7 @@ class ConcretBuilder implements Builder {
         $this->reset();
     }
     
+    //Interface
     public function crearCard(): void{
         
     }
@@ -30,6 +31,7 @@ class ConcretBuilder implements Builder {
         
     }
     
+    //Metodos propios
     public function cierre(): void{
         
     }
