@@ -39,8 +39,9 @@ include_once 'Scripts/php/ti.php';
       <!-- Sidebar Buttons -->
       <div class="list-group list-group-flush">
         <!-- Boton Entretainment -->
-        <Button class="btn btn-success" style="height: 55px; margin: 5px; margin-bottom: 20px;"
-          onclick="location.href = '/entertainment'">
+        
+        <Button hr class="btn btn-success" style="height: 55px; margin: 5px; margin-bottom: 20px;"
+          onclick="location.href = 'styled_shop.php'">
           <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-controller" fill="currentColor"
             xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd"
@@ -50,7 +51,7 @@ include_once 'Scripts/php/ti.php';
             <path
               d="M3.5 6.526h3v1h-3v-1zM3.051 3.26a.5.5 0 0 1 .354-.613l1.932-.518a.5.5 0 0 1 .258.966l-1.932.518a.5.5 0 0 1-.612-.354zm9.976 0a.5.5 0 0 0-.353-.613l-1.932-.518a.5.5 0 1 0-.259.966l1.932.518a.5.5 0 0 0 .612-.354z" />
           </svg>
-          - Entertainment
+           Tienda
           <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-caret-right-fill" fill="currentColor"
             xmlns="http://www.w3.org/2000/svg">
             <path
@@ -60,7 +61,7 @@ include_once 'Scripts/php/ti.php';
 
         <!-- Boton Game of learn -->
         <Button class="btn btn-info" style="height: 55px; margin: 5px; margin-bottom: 20px;"
-          onclick="location.href = '/learn'">
+          onclick="location.href = 'styled_login.php'">
           <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-book" fill="currentColor"
             xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd"
@@ -68,7 +69,7 @@ include_once 'Scripts/php/ti.php';
             <path fill-rule="evenodd"
               d="M12.786 1.072C11.188.752 9.084.71 7.646 2.146A.5.5 0 0 0 7.5 2.5v11a.5.5 0 0 0 .854.354c.843-.844 2.115-1.059 3.47-.92 1.344.14 2.66.617 3.452 1.013A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.276-.447L15.5 2.5l.224-.447-.002-.001-.004-.002-.013-.006-.047-.023a12.582 12.582 0 0 0-.799-.34 12.96 12.96 0 0 0-2.073-.609zM15 2.82v9.908c-.846-.343-1.944-.672-3.074-.788-1.143-.118-2.387-.023-3.426.56V2.718c1.063-.929 2.631-.956 4.09-.664A11.956 11.956 0 0 1 15 2.82z" />
           </svg>
-          - Learning Games
+           Iniciar Sesion
           <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-caret-right-fill" fill="currentColor"
             xmlns="http://www.w3.org/2000/svg">
             <path
@@ -77,8 +78,8 @@ include_once 'Scripts/php/ti.php';
         </Button>
 
         <!-- Boton Social contribution -->
-        <Button class="btn btn-danger" style="height: 55px; margin: 5px; margin-bottom: 20px;"
-          onclick="location.href = '/socialcontribution'">
+        <Button class="btn btn-info" style="height: 55px; margin: 5px; margin-bottom: 20px;"
+          onclick="location.href = 'styled_register.php'">
           <svg width="1.8em" height="1.8em" viewBox="0 0 16 16" class="bi bi-emoji-sunglasses" fill="currentColor"
             xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
@@ -87,7 +88,7 @@ include_once 'Scripts/php/ti.php';
             <path
               d="M2.31 5.243A1 1 0 0 1 3.28 4H6a1 1 0 0 1 1 1v1a2 2 0 0 1-2 2h-.438a2 2 0 0 1-1.94-1.515L2.31 5.243zM9 5a1 1 0 0 1 1-1h2.72a1 1 0 0 1 .97 1.243l-.311 1.242A2 2 0 0 1 11.439 8H11a2 2 0 0 1-2-2V5z" />
           </svg>
-          - Social Contribution
+           Registrarse
           <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-caret-right-fill" fill="currentColor"
             xmlns="http://www.w3.org/2000/svg">
             <path
@@ -96,8 +97,8 @@ include_once 'Scripts/php/ti.php';
         </Button>
 
         <!-- Boton Technical contribution -->
-        <Button class="btn btn-dark" style="height: 55px; margin: 5px; margin-bottom: 20px;"
-          onclick="location.href = '/technicalcontribution'">
+        <Button class="btn btn-danger" style="height: 55px; margin: 5px; margin-bottom: 20px;"
+          onclick="location.href = 'logout.php'">
           <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-hammer" fill="currentColor"
             xmlns="http://www.w3.org/2000/svg">
             <path
@@ -105,7 +106,7 @@ include_once 'Scripts/php/ti.php';
             <path fill-rule="evenodd"
               d="M6.012 3.5a.5.5 0 0 1 .359.165l9.146 8.646A.5.5 0 0 1 15.5 13L14 14.5a.5.5 0 0 1-.756-.056L4.598 5.297a.5.5 0 0 1 .048-.65l1-1a.5.5 0 0 1 .366-.147z" />
           </svg>
-          - Technical Contribution
+           Cerrar Sesion
           <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-caret-right-fill" fill="currentColor"
             xmlns="http://www.w3.org/2000/svg">
             <path
@@ -206,7 +207,6 @@ include_once 'Scripts/php/ti.php';
           <?php endblock() ?>
           <br>
         </div>
-
       </div>
     </div>
   </div>
