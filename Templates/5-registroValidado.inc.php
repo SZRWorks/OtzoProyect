@@ -27,8 +27,8 @@
     ?>  
 </div>
 <div class="form-group">
-    <label>Email</label>
-    <input type="text" class="form-control" name="dom" placeholder="ejemplo99@gmail.com">
+    <label>Domicilio</label>
+    <input type="text" class="form-control" name="dom" placeholder="Juarez 29">
     <?php
     $validador->mostrarErrorNombre();
     ?>  

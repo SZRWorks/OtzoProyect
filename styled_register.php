@@ -20,7 +20,7 @@ if (isset($_POST['enviar'])){
         if($usuarioInsertado){
             //Redirigir a registro-correcto
             //Redireccion::redirigir(RUTA_REGISTRO_CORRECTO. '?nombre='. $validador->getNombre());
-            Redireccion::redirigir('registroCorrecto.php?nombre='.$validador->getNombre());            
+            Redireccion::redirigir('styled_successSingup.php?nombre='.$validador->getNombre());            
         }  
     Conexion :: cerrarConexion();  
     }
