@@ -32,11 +32,10 @@
             <div class="container">
                 <?php
                 echo '<div class="row">';
-                for ($i = 1; $i <= 3; $i++) {
-                    $director->buildProduct($i);
+                for ($i = 1; $i <= $director->getLimit(); $i++) {
+                        $director->buildProduct($i);
                 }
                 echo '</div>';
-
                 ?>
             </div>
         </div>

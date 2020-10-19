@@ -15,12 +15,12 @@ class Director {
     public function buildProduct($id){
         $this->builder->crearData($this->conexion, $id);
         $this->builder->crearCard();
+        $this->builder->crearImagen();
         $this->builder->crearTitulo();
         $this->builder->crearPrecio();
         $this->builder->crearDescripcion();
         $this->builder->crearCategoria();
         $this->builder->crearMarca();
-        $this->builder->crearImagen();
     }
     
     function getLimit() {

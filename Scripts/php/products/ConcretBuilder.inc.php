@@ -48,38 +48,34 @@ class ConcretBuilder implements Builder {
     }
 
     public function crearCard(): void{
-        echo '<div class="col-xl-4">
-                        <div class="card mb-3" style="height: 350px;">
-                            <div class="row no-gutters">
-                                <div class="col-md-8">
-                                    <div class="card-body">';
+        echo '<div class="col-md-4"><div class="card" style="height: 500px; margin-bottom: 20px;">';
     }
-    
-    public function crearTitulo(): void{
-        echo '<h5 class="card-title">' . $this->data["Titulo"];
+
+    public function crearImagen(): void {
+        echo '<img src="data:image/png;base64,'
+        . base64_encode($this->data['Imagen']) . '" class="card-img-top" width="500" height="300" alt="...">';
     }
-    
-    public function crearPrecio(): void{
-        echo'  <b>$'. $this->data['Precio'] . '</b></h5>';
+
+    public function crearTitulo(): void {
+        echo '<div class="card-body"><h5 class="card-title">' . $this->data["Titulo"];
     }
-    
-    public function crearDescripcion(): void{
-        echo '<p class="card-text">'. $this->data['Producto'] . '</p>';
+
+    public function crearPrecio(): void {
+        echo'  <b>$' . $this->data['Precio'] . '</b></h5>';
     }
-    
-    public function crearCategoria(): void{
-        echo '<p class="card-text"><small class="text-muted">'. $this->data['Categoria'] . ', ';
+
+    public function crearDescripcion(): void {
+        echo '<p class="card-text">' . $this->data['Producto'] . '</p></div>';
     }
-    
-    public function crearMarca(): void{
-       echo $this->data['Marca'] . '</small></p></div></div>'; 
+
+    public function crearCategoria(): void {
+        echo '<div class="card-footer"><p class="card-text"><small class="text-muted">' . $this->data['Categoria'] . ', ';
     }
-    
-    public function crearImagen(): void{
-       echo '<div class="col-md-4"> <img src="data:image/png;base64,' 
-                . base64_encode($this->data['Imagen']) . '" class="card-img" alt="..."></div></div></div></div>'; 
+
+    public function crearMarca(): void {
+        echo $this->data['Marca'] . '</small></p></div></div></div>';
     }
-    
+
     public function getProduct(){
         $result = $this->product;
         $this->reset();
