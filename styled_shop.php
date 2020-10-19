@@ -32,7 +32,7 @@
             <div class="container">
                 <?php
                 echo '<div class="row">';
-                for ($i = $j; $i <= 3; $i++) {
+                for ($i = 1; $i <= 3; $i++) {
                     $director->buildProduct($i);
                 }
                 echo '</div>';
