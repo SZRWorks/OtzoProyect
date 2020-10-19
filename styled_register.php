@@ -1,4 +1,4 @@
-<?php
+<?php //
 include_once 'Scripts/php/Conexion.inc.php';
 include_once 'Scripts/php/Usuario.inc.php';
 include_once 'Scripts/php/RepositorioUsuario.inc.php';

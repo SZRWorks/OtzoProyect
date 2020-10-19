@@ -2,9 +2,9 @@
 
 class Product {
     
-    public $partes = [];
+    public $parts = [];
     
-    public function elistar(){
-        echo "Producto: ". implode("," , partes) . "\n";
+    public function listParts(){
+        echo implode("" , $this->parts) . "\n";
     }
 }
