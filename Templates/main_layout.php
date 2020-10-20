@@ -13,7 +13,7 @@ include_once 'Scripts/php/ControlSesion.inc.php';
   <div class="d-flex" id="wrapper">
 
     <!-- Sidebar -->
-    <div class="bg-light border-right shadow" id="sidebar-wrapper">
+    <div class="bg-primary border-right shadow" id="sidebar-wrapper">
 
       <!-- Cabecera del Sidebar -->
       <div class="sidebar-heading bg-info" style="align-content: center;">

@@ -1,9 +1,19 @@
+
 body {
-    background: #1CD8D2;
-    background: -webkit-linear-gradient(to right, #93EDC7, #1CD8D2);
-    background: linear-gradient(to right, #93EDC7, #1CD8D2);
+  background-color: black;
+  background-image: url('../../Imagenes/TestBG.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
+body:after {
+  content: "";
+	background: linear-gradient(rgba(0, 0, 0, 0), rgba(20, 20, 20, 1));
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+}
 
 
 .border-2 {

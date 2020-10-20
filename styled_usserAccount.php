@@ -8,15 +8,7 @@
 
         <div class="card-header text-center">
             <span class="text-warning h2">
-                {% if local_account %}
-                My Account
-                {% else %}
-                More About {{ account_data['UserName'] }}
-                {% endif %}
-
-                <?php
-                if (ControlSession:)
-                ?>
+                Acerca de TestUser
             </span>
         </div>
 
@@ -24,7 +16,7 @@
         <blockquote class="blockquote mb-0">
             <div class="content-section">
                 <br>
-                <img class="icon-shape-sr shadow" src="{{ url_for('static', filename=account_data.ImgRoute) }}"
+                <img class="icon-shape-sr shadow" src="Imagenes/EPICFox2.gif"
                     width="200px" height="200px">
                 <div class="media-body">
                     <h2 class="account-heading text-light" style="
@@ -36,12 +28,10 @@
                         1px 1px #000, 
                         -1px -1px 0 #000, 
                         1px -1px 0 #000, 
-                        -1px 1px 0 #000;">{{ account_data['UserName'] }}
+                        -1px 1px 0 #000;">TestUser
                     </h2>
                     
-                    {% if local_account %}
                     <a class="h6 text-warning" href="#down"> Do you want to update your data?</a><br>
-                    {% endif %}
 
                     <!-- User badges -->
                     <span><strong class="h3" style="font-weight: bold;">Badges: </strong></span>
@@ -68,32 +58,12 @@
 
 
                 <span><strong class="h3" style="font-weight: bold;">
-                        {% if local_account %}
-                        My Description:
-                        {% else %}
-                        User Description:
-                        {% endif %}
-                    </strong></span>
+                    My Description: <br>
+                </strong></span>
                 <p style="max-width: 500px;">
-                    {{ account_data["Description"] }}
+                    Pequeña descripcion sobre el usuario :3
                 </p>
                 <br><br>
-
-
-                {% if local_account %}
-                <!-- Show the alerts -->
-                {% with messages = get_flashed_messages() %}
-                {% if messages %}
-                {%     for message in messages %}
-                <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                    {{message}}
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                {%     endfor %}
-                {% endif %}
-                {% endwith %}
 
                 <div class="card-header text-center border-top">
                     <span class="text-warning h2"> Update User Data </span>
@@ -118,7 +88,7 @@
                                 <textarea class="form-control" maxlength="350" id="desc" name="description" rows="3"
                                     placeholder="New Description"
                                     style="max-height:150px; min-height: 100px; height: 100px;"
-                                    required>{{ account_data['Description'] }}</textarea>
+                                    required>Pequeña descripcion sobre el usuario :3</textarea>
                             </div>
                             <div class="form-group">
                                 <label for="icon" class="text-dark">User Icon</label>
