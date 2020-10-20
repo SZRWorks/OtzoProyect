@@ -22,7 +22,7 @@
             Iniciar Sesion!
         </button>
         <br>                          
-        <p class="text-center">Necesitas ayuda con tu contraseña? <a href="#">Intentalo aqui</a></p>    
+        <p class="text-center">¿Necesitas ayuda con tu contraseña? <a href="#">Intentalo aqui</a></p>    
 </form>
  <?php
     include_once './Templates/2-Cierre.inc.php';
