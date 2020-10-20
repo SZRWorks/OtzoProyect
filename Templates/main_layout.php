@@ -18,7 +18,7 @@ include_once 'Scripts/php/ControlSesion.inc.php';
       <!-- Cabecera del Sidebar -->
       <div class="sidebar-heading bg-info" style="align-content: center;">
           <!-- Icono del usuario. -->
-          <img class="icon-shape-sr shadow" src="Imagenes/EPICFoxIcon.gif" width="200px" height="200px">
+          <img class="icon-shape-sr shadow" src="Imagenes/otzologin.png" width="200px" height="200px">
 
           <!-- Nombre del usuario -->
           <div align="center" class="text-primary" id="username-lb" style="

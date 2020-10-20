@@ -5,14 +5,14 @@
         <div class="col-md-6 text-center">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title"> Instruncciones</h3>
+                    <h3 class="panel-title"> Instrucciones</h3>
                 </div>
                 <div class="panel-body">
                     <p class="text-justify"> Instrucciones </p>
                     <br>
-                    <a href="#">Ya tienes cuenta?</a>
+                    <a href="#">¿Ya tienes cuenta?</a>
                     <br>
-                    <a href="#">Olvidaste tu contrasena?</a>
+                    <a href="#">¿Olvidaste tu contrasena?</a>
                 </div>
             </div>
         </div>

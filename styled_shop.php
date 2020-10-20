@@ -8,9 +8,6 @@
     $builder = new ConcretBuilder();
     $director = new Director($builder, Conexion::getConexion());
    
-    
-
-    
     include_once 'Templates/main_layout.php';
     startblock("Body");
 ?>
@@ -32,9 +29,9 @@
             <div class="container">
                 <?php
                 echo '<div class="row">';
-                for ($i = 1; $i <= $director->getLimit(); $i++) {
-                        $director->buildProduct($i);
-                }
+                    for ($i = 1; $i <= $director->getLimit(); $i++) {
+                            $director->buildProduct($i);
+                    }
                 echo '</div>';
                 ?>
             </div>
