@@ -8,7 +8,7 @@
                     <h3 class="panel-title"> Instruncciones</h3>
                 </div>
                 <div class="panel-body">
-                    <p class="text-justify"> Instrucciones </p>
+                    <p class="text-justify">  </p>
                     <br>
                     <a href="#">Ya tienes cuenta?</a>
                     <br>
