@@ -4,6 +4,8 @@ include_once 'Templates/1-Apertura.inc.php';
 // Script que me ayuda a que esto se paresca mas a flask ;D
 include_once 'Scripts/php/ti.php';
 
+include_once 'Scripts/php/ControlSesion.inc.php';
+
 ?>
 
 
@@ -29,7 +31,14 @@ include_once 'Scripts/php/ti.php';
                   -1px -1px 0 #fff,
                   1px -1px 0 #fff,
                   -1px 1px 0 #fff;">
-            TestUser
+              <?php
+                if (ControlSesion::sesionIniciada())
+                {
+                  echo($_SESSION['nombreUsuario']);
+                }
+                else{ echo("<a class='text-primary' href='styled_login.php'>Inicia sesion!!</a>"); }
+              ?>
+
           </div>
       </div>
 
