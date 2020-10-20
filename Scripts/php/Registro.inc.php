@@ -10,9 +10,9 @@
                 <div class="panel-body">
                     <p class="text-justify"> Instrucciones </p>
                     <br>
-                    <a href="#">Ya tienes cuenta?</a>
+                    <a href="#">¿Ya tienes cuenta?</a>
                     <br>
-                    <a href="#">Olvidaste tu contrasena?</a>
+                    <a href="#">¿Olvidaste tu contrasena?</a>
                 </div>
             </div>
         </div>
