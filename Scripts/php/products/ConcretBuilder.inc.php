@@ -39,6 +39,7 @@ class ConcretBuilder implements Builder {
                 $sentencia->bindParam(':id', $tempId, PDO::PARAM_INT);
                 $sentencia->execute();
                 $this->data = $sentencia->fetch();
+                $this->product->parts[] = array_merge($this->product->parts, $this->data);
             } catch (Exception $ex) {
                 print "ERROR: ". $ex ->getMessage() . "<br>";
             }
@@ -48,7 +49,7 @@ class ConcretBuilder implements Builder {
     }
 
     public function crearCard(): void{
-        echo '<div class="col-md-4"><div class="card" style="height: 500px; margin-bottom: 20px;">';
+        echo '<div class="col-md-4"><div class="card" style="height: 550px; margin-bottom: 20px;">';
     }
 
     public function crearImagen(): void {
@@ -65,7 +66,7 @@ class ConcretBuilder implements Builder {
     }
 
     public function crearDescripcion(): void {
-        echo '<p class="card-text">' . $this->data['Producto'] . '</p></div>';
+        echo '<p class="card-text">' . $this->data['Producto'] . '</p><a href="#" class="btn btn-primary">Agregar al Carrito</a></div>';
     }
 
     public function crearCategoria(): void {
