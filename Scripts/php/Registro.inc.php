@@ -5,12 +5,11 @@
         <div class="col-md-6 text-center">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title"> Instrucciones</h3>
+                    <h3 class="panel-title"> Ayuda: </h3>
                 </div>
                 <div class="panel-body">
-                    <p class="text-justify"> Instrucciones </p>
                     <br>
-                    <a href="#">¿Ya tienes cuenta?</a>
+                    <a href="/OtzoProyect/styled_login.php">¿Ya tienes cuenta?</a>
                     <br>
                     <a href="#">¿Olvidaste tu contrasena?</a>
                 </div>

@@ -1,7 +1,7 @@
 
 
 <form role="form" method="POST" action="<?php echo $_SERVER['PHP_SELF'] ?>">
-    <h3>Datos Aqui!</h3>
+    <h3>Datos de Inicio.</h3>
         <br>
         <label for="email"> Correo aqui:</label>
         <input type="email" class="form-control" id="email" name="email" placeholder="Email"
