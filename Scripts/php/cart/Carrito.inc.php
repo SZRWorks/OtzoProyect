@@ -48,8 +48,8 @@ class Carrito {
     //Fin Acciones Carrito
 
     public function crearTabla($conexion) {
-        echo '<table class="table">'
-        . '<thead class="thead-dark">
+        echo '<table class="table table-bordered">'
+        . '<thead class="thead-light">
                     <tr>
                       <th scope="col">Producto</th>
                       <th scope="col">Precio</th>

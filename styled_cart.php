@@ -18,15 +18,15 @@ $titulo = 'Carrito';
 include_once 'Templates/main_layout.php';
 startblock("Body");
 ?>
-<div class="card bg-light border border-warning shadow" style="border-radius: 5px; min-height: 750px;">
+<div class="card bg-primary border border-info shadow" style="border-radius: 5px; min-height: 750px;">
     <!-- Titulo de la tarjeta -->
     <div class="card-header text-center">
-        <span class="text-warning h1" style="font-family: sans-serif;">
+        <span class="text-light h1" style="font-family: sans-serif;">
             Carrito
         </span>
     </div>
 
-    <!-- Cuerpo de la tarjeta -->
+    <!-- Cuerpo del carrito -->
     <blockquote class="blockquote mb-0">
         <div class="content-section">
             <br><br>

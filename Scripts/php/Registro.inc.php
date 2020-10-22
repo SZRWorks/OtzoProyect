@@ -11,7 +11,7 @@
                     <br>
                     <a href="/OtzoProyect/styled_login.php">¿Ya tienes cuenta?</a>
                     <br>
-                    <a href="#">¿Olvidaste tu contrasena?</a>
+                    <a href="/OtzoProyect/styled_workInProgress.php">¿Olvidaste tu contrasena?</a>
                 </div>
             </div>
         </div>

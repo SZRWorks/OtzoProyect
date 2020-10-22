@@ -116,7 +116,7 @@ include_once 'Scripts/php/ControlSesion.inc.php';
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Pestaña de creditos -->
+        <!-- Pestaña de creditos
         <span class="badge badge-warning align-bottom" style="margin-left: 10px; height: 30px;">
           <svg width="2.5em" height="2.5em" viewBox="0 0 16 16" class="bi bi-cash-stack" fill="currentColor"
             xmlns="http://www.w3.org/2000/svg">
@@ -128,6 +128,7 @@ include_once 'Scripts/php/ControlSesion.inc.php';
           </svg>
           Credits: $$
         </span>
+        -->
 
         <!-- Boton para desplazar Sidebar -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
