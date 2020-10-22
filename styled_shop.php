@@ -23,7 +23,7 @@ Conexion::abrirConexion();
     startblock("Body");
 ?>
 
-<div class="card bg-light border border-warning shadow" style="border-radius: 5px; min-height: 750px;">
+<div class="card bg-primary text-light border border-warning shadow" style="border-radius: 5px; min-height: 750px;">
     <!-- Titulo de la tarjeta -->
     <div class="card-header text-center">
         <span class="text-warning h1" style="font-family: sans-serif;">

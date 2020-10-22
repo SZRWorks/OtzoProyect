@@ -39,8 +39,8 @@ include_once 'Templates/main_layout.php';
 <?php startblock("Body"); ?>
 
     <div align="center">
-        <div class="card border-info shadow" style="max-width: 550px; margin-top: 20px;">
-            <div class="card-header text-center">
+        <div class="card border-info bg-primary text-light shadow" style="max-width: 550px; margin-top: 20px;">
+            <div class="card-header text-center text-light">
                 <div class="text-right"> <button class="btn btn-danger" onclick="location.href = '/OtzoProyect/styled_register.php'">Sing Up</button>
                 </div>
                 <span class="text-success h2"> Login </span>
