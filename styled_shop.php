@@ -2,12 +2,23 @@
     include_once 'Scripts/php/Conexion.inc.php';
     include_once 'Scripts/php/products/ConcretBuilder.inc.php';
     include_once 'Scripts/php/products/Director.inc.php';
-
+    include_once 'Scripts/php/cart/Carrito.inc.php';
+    include_once 'Scripts/php/ControlSesion.inc.php';
     
-    Conexion::abrirConexion();
+
+    $id = filter_input(INPUT_GET, 'id');
+    
+    if (isset($id)) {
+        Carrito::getInstance()->add($id);
+    }
+
+
+Conexion::abrirConexion();
     $builder = new ConcretBuilder();
     $director = new Director($builder, Conexion::getConexion());
    
+    
+    $titulo = "Tienda";
     include_once 'Templates/main_layout.php';
     startblock("Body");
 ?>
@@ -16,14 +27,12 @@
     <!-- Titulo de la tarjeta -->
     <div class="card-header text-center">
         <span class="text-warning h1" style="font-family: sans-serif;">
-        Tienda
+            Tienda
         </span>
     </div>
 
     <!-- Cuerpo de la tarjeta -->
     <blockquote class="blockquote mb-0">
-        <div>
-        </div>
         <div class="content-section">
             <br><br>
             <div class="container">
@@ -37,6 +46,7 @@
             </div>
         </div>
     </blockquote>
+</div>
 
 <?php
     endblock();

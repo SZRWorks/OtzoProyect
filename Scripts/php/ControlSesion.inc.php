@@ -10,6 +10,7 @@ class  ControlSesion {
         
         $_SESSION['id'] = $id;
         $_SESSION['nombreUsuario'] = $usuario;
+        $_SESSION['cart'][] = [];
     }
     
     
@@ -23,6 +24,10 @@ class  ControlSesion {
         if(isset($_SESSION['nombreUsuario'])){
             unset($_SESSION['nombreUsuario']);
         }
+        
+        if(isset($_SESSION['cart'])){
+            unset($_SESSION['cart']);
+        }
         session_destroy();
     }
     
@@ -31,7 +36,7 @@ class  ControlSesion {
             session_start();
         }
         
-        if(isset($_SESSION['nombreUsuario']) && isset($_SESSION['id']) ){
+        if(isset($_SESSION['nombreUsuario']) && isset($_SESSION['id']) && isset($_SESSION['cart'])){
             return true;    
         }else{
             return false;

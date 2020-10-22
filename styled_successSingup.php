@@ -1,4 +1,4 @@
-<?php include_once 'Templates/main_layout.php'; ?>
+<?php $titulo = "Registro Correcto"; include_once 'Templates/main_layout.php'; ?>
 
 
 <!-- Aplica el login dentro de la main_layout -->

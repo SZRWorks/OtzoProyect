@@ -15,6 +15,7 @@ class ConcretBuilder implements Builder {
     
     private $product;
     private $data;
+    private $id;
 
     public function __construct(){
         $this->reset();
@@ -26,6 +27,7 @@ class ConcretBuilder implements Builder {
 
     //Interface
     public function crearData($conexion, $id) {
+        $this->id = $id;
         if (isset($conexion)) {
             try {
                 $sql = 'SELECT '
@@ -66,7 +68,7 @@ class ConcretBuilder implements Builder {
     }
 
     public function crearDescripcion(): void {
-        echo '<p class="card-text">' . $this->data['Producto'] . '</p><a href="#" class="btn btn-primary">Agregar al Carrito</a></div>';
+        echo '<p class="card-text" style="height: 50px;">' . $this->data['Producto'] . '</p><a href="styled_shop.php?id='. $this->id  .'" class="btn btn-primary">Agregar al Carrito</a></div>';
     }
 
     public function crearCategoria(): void {

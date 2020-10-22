@@ -154,7 +154,7 @@ include_once 'Scripts/php/ControlSesion.inc.php';
 
             <!-- Shop button -->
             <li class="nav-item active">
-              <a class="btn btn-secondary nav-link" onclick="location.href = 'styled_shop.php'"
+              <a class="btn btn-secondary nav-link" onclick="location.href = 'styled_cart.php'"
                 style="margin-left: 5px; margin-top: 2px;">
                 <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-shop text-primary" fill="currentColor"
                   xmlns="http://www.w3.org/2000/svg">

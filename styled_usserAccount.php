@@ -1,4 +1,4 @@
-<?php include_once 'Templates/main_layout.php'; ?>
+<?php $titulo = "Usuario"; include_once 'Templates/main_layout.php'; ?>
 
 
 <?php startblock("Body"); ?>
