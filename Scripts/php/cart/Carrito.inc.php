@@ -3,6 +3,7 @@
 class Carrito {
 
     private static $instances = [];
+    private $subtotal = [];
 
     //Singlenton
     public static function getInstance(): Carrito {
@@ -35,6 +36,14 @@ class Carrito {
                     </button>
                 </div>';
         }
+    }
+    
+    public function getTotal(){
+        $total = 0;
+        foreach($this->subtotal as $valor){
+           $total += $valor; 
+        }
+        return $total;
     }
     
     public function del($producto) {
@@ -72,6 +81,7 @@ class Carrito {
                       <th scope="col">Producto</th>
                       <th scope="col">Precio</th>
                       <th scope="col">Cantidad</th>
+                      <th scope="col">Sub-total</th>
                       <th scope="col">Controles</th>
                     </tr>
                     </thead>
@@ -95,6 +105,7 @@ class Carrito {
         . '<td>' . $data['Titulo'] . '</td>'
         . '<td>$' . $data['Precio'] . '</td>'
         . '<td><form><input type="number" value="' . $cantidad . '" name="cantidad"><input type="hidden" name="id" value="'.$id.'" /></form></td>'
+        . '<td> $'.($this->subtotal[] = $data['Precio'] * $cantidad).'</td>'
         . '<td><a class="btn btn-primary" href="styled_cart.php?eliminar='.$id.'" role="button">Eliminar</a></td>'
         . '</tr>';
     }
