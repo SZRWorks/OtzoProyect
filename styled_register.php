@@ -43,7 +43,7 @@ include_once 'Templates/main_layout.php';
         <div class="card border-info bg-primary text-light shadow" style="max-width: 850px; margin-top: 20px;">
 
             <div class="card-header text-center">
-                <div class="text-right"> <button class="btn btn-danger" onclick="location.href = '/OtzoProyect/styled_login.php'">Login</button>
+                <div class="text-right"> <button class="btn btn-danger" onclick="location.href = 'styled_login.php'">Iniciar Sesion</button>
                 </div>
                 <span class="text-success h2"> Registro </span>
             </div>
