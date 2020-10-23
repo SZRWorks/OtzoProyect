@@ -39,11 +39,7 @@ class Carrito {
     }
     
     public function getTotal(){
-        $total = 0;
-        foreach($this->subtotal as $valor){
-           $total += $valor; 
-        }
-        return $total;
+        return array_sum($this->subtotal);
     }
     
     public function del($producto) {
