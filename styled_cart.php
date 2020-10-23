@@ -13,6 +13,26 @@ include_once 'Scripts/php/cart/Carrito.inc.php';
 Conexion::abrirConexion();
 $carrito = Carrito::getInstance();
 
+$id = filter_input(INPUT_GET, 'id');
+$cantidad = filter_input(INPUT_GET, 'cantidad');
+$eliminar = filter_input(INPUT_GET, 'eliminar');
+$clean = filter_input(INPUT_GET, 'clean');
+$buy = filter_input(INPUT_GET, 'buy');
+
+if (isset($id) and isset($cantidad)){
+    $carrito->setValue($id,$cantidad);
+}
+
+if(isset($eliminar)){
+    $carrito->del($eliminar);
+}
+
+if(isset($clean)){
+    $carrito->clean();
+}
+
+
+
 $titulo = 'Carrito';
 
 include_once 'Templates/main_layout.php';
@@ -35,6 +55,10 @@ startblock("Body");
                     $carrito->crearTabla(Conexion::getConexion());
                 ?>
             </div>
+            <form class="form-inline">
+                <button type="submit" name="clean" value="1" class="btn btn-danger">Limpiar</button>
+                <button type="submit" name="buy" value="1" class="btn btn-info">Comprar</button>
+            </form>
         </div>
     </blockquote>
 </div>
