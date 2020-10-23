@@ -55,9 +55,9 @@ startblock("Body");
                 ?>
             </div>
             <form class="form-inline">
-                <?php echo '$ '.$carrito->getTotal(); ?>
                 <button type="submit" name="clean" value="1" class="btn btn-danger m-2 ml-3">Limpiar</button>
                 <button type="submit" name="buy" value="1" class="btn btn-info">Comprar</button>
+                <?php echo '<div class="text-light m-2 border-bottom">Total a pagar: $ '.$carrito->getTotal().'</div>'; ?>
             </form>
         </div>
     </blockquote>

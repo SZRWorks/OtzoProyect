@@ -97,10 +97,10 @@ class Carrito {
         $sentencia->bindParam(':id', $id, PDO::PARAM_INT);
         $sentencia->execute();
         $data = $sentencia->fetch();
-        echo '<tr>'
+        echo '<tr class="text-light">'
         . '<td>' . $data['Titulo'] . '</td>'
         . '<td>$' . $data['Precio'] . '</td>'
-        . '<td><form><input type="number" value="' . $cantidad . '" name="cantidad"><input type="hidden" name="id" value="'.$id.'" /></form></td>'
+        . '<td ><form><input type="number" value="' . $cantidad . '" name="cantidad"><input type="hidden" name="id" value="'.$id.'" /></form></td>'
         . '<td> $'.($this->subtotal[] = $data['Precio'] * $cantidad).'</td>'
         . '<td><a class="btn text-danger" href="styled_cart.php?eliminar='.$id.'" role="button">Eliminar</a></td>'
         . '</tr>';
