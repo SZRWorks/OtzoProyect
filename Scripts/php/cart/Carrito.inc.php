@@ -37,6 +37,14 @@ class Carrito {
         }
     }
     
+    public function getTotal(){
+        $total = 0;
+        foreach($this->subtotal as $valor){
+           $total += $valor; 
+        }
+        return $total;
+    }
+    
     public function del($producto) {
         if(ControlSesion::SesionIniciada()){
             if(array_key_exists($producto,  $_SESSION["cart"])){
