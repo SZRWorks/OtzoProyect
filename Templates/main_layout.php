@@ -153,9 +153,9 @@ include_once 'Scripts/php/ControlSesion.inc.php';
               </a>
             </li>
 
-            <!-- Shop button -->
+            <!-- Cart button -->
             <li class="nav-item active">
-              <a class="btn btn-secondary nav-link" onclick="location.href = 'styled_cart.php'"
+              <a class="btn btn-secondary nav-link" onclick="location.href = '<?php if (ControlSesion::sesionIniciada()){ echo('styled_cart.php');} else{echo('styled_error.php');} ?>'"
                 style="margin-left: 5px; margin-top: 2px;">
                 <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-shop text-primary" fill="currentColor"
                   xmlns="http://www.w3.org/2000/svg">
