@@ -18,7 +18,7 @@
             $validador -> mostrarError();
         }
         ?>
-        <button class="btn btn-lg btn-primary btn-block" type="submit" name="login">
+        <button class="btn btn-lg btn-success btn-block" type="submit" name="login">
             Iniciar Sesion!
         </button>
         <br>                          

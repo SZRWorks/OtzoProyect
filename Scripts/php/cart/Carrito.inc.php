@@ -95,7 +95,7 @@ class Carrito {
         . '<td>' . $data['Titulo'] . '</td>'
         . '<td>$' . $data['Precio'] . '</td>'
         . '<td><form><input type="number" value="' . $cantidad . '" name="cantidad"><input type="hidden" name="id" value="'.$id.'" /></form></td>'
-        . '<td><a class="btn btn-primary" href="styled_cart.php?eliminar='.$id.'" role="button">Eliminar</a></td>'
+        . '<td><a class="btn text-danger" href="styled_cart.php?eliminar='.$id.'" role="button">Eliminar</a></td>'
         . '</tr>';
     }
 

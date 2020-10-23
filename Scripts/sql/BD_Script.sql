@@ -58,10 +58,10 @@ INSERT INTO categoria (Nombre) VALUES ("Tecnologia"), ("Comida") , ("Bedidas"), 
 INSERT INTO `producto` (`Imagen`, `Titulo`, `id_Marca`, `Descripcion`, `Precio`, `id_Categoria`) VALUES (LOAD_FILE("C:/Users/Gael/Desktop/imagenes/remasterizado.png"), "Refresco Otzo", 3, "Refresco de Cola lleno de sabor y burbujas", 12.50, 3);
 
 INSERT INTO `producto` (`Imagen`, `Titulo`, `id_Marca`, `Descripcion`, `Precio`, `id_Categoria`) 
-    VALUES (LOAD_FILE("C:/Users/Gael/Desktop/imagenes/desechables.png"), "Desechables Otzo", 3, "Ahorra con nuestros platos y vasos aprueba de todo", 20, 7), 
-           (LOAD_FILE("C:/Users/Gael/Desktop/imagenes/Dulce.png"), "Dulce Otzo", 3, "Antes o despues de la accion", 1.50, 4), (LOAD_FILE("C:/Users/Gael/Desktop/imagenes/papas.png"), "Cheetos Flaming Hot", 4, "De parte de Cheester Cheetos", 13, 2), (LOAD_FILE("C:/Users/Gael/Desktop/imagenes/Limpieza.png"), "Kit de Limpieza Otzo", 3, "Elimina al coronavirus con nuestro Kit!", 150, 7), 
-           (LOAD_FILE("C:/Users/Gael/Desktop/imagenes/recargas.png"), "Recargas Otzo", 3, "No te quedes sin saldo", 0, 1), 
-           (LOAD_FILE("C:/Users/Gael/Desktop/imagenes/tarjeta de regalo.png"), "Tarjeta de regalo Otzo", 3, "Regala Credito a una persona especial o a ti mismo claro...", 100, 3)
+    VALUES (LOAD_FILE("C:/xampp/htdocs/OtzoProyect/Imagenes/desechables.png"), "Desechables Otzo", 3, "Ahorra con nuestros platos y vasos aprueba de todo", 20, 7), 
+           (LOAD_FILE("C:/xampp/htdocs/OtzoProyect/Imagenes/Dulce.png"), "Dulce Otzo", 3, "Antes o despues de la accion", 1.50, 4), (LOAD_FILE("C:/Users/Gael/Desktop/imagenes/papas.png"), "Cheetos Flaming Hot", 4, "De parte de Cheester Cheetos", 13, 2), (LOAD_FILE("C:/Users/Gael/Desktop/imagenes/Limpieza.png"), "Kit de Limpieza Otzo", 3, "Elimina al coronavirus con nuestro Kit!", 150, 7), 
+           (LOAD_FILE("C:/xampp/htdocs/OtzoProyect/Imagenes/recargas.png"), "Recargas Otzo", 3, "No te quedes sin saldo", 0, 1), 
+           (LOAD_FILE("C:/xampp/htdocs/OtzoProyect/Imagenes/tarjeta.png"), "Tarjeta de regalo Otzo", 3, "Regala Credito a una persona especial o a ti mismo claro...", 100, 3)
 
 INSERT INTO mcporproducto (id_Marca, id_Categoria, id_Producto)
 	SELECT P.id_Marca, P.id_Categoria, P.id_Producto FROM producto P;

@@ -51,7 +51,7 @@ class ConcretBuilder implements Builder {
     }
 
     public function crearCard(): void{
-        echo '<div class="col-md-4"><div class="card" style="height: 550px; margin-bottom: 20px;">';
+        echo '<div class="col-md-4"><div class="card bg-secondary" style="height: 550px; margin-bottom: 20px;">';
     }
 
     public function crearImagen(): void {
@@ -72,7 +72,7 @@ class ConcretBuilder implements Builder {
     }
 
     public function crearCategoria(): void {
-        echo '<div class="card-footer"><p class="card-text"><small class="text-muted">' . $this->data['Categoria'] . ', ';
+        echo '<div class="card-footer"><p class="card-text"><small class="text-primary">' . $this->data['Categoria'] . ', ';
     }
 
     public function crearMarca(): void {
