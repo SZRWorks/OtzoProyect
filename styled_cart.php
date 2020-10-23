@@ -4,7 +4,6 @@ include_once 'Scripts/php/Redireccion.inc.php';
 
 if (!ControlSesion::sesionIniciada()) {
     Redireccion::redirigir('index.php');
-    echo 'Todo mal ?';
 }
 
 include_once 'Scripts/php/Conexion.inc.php';
@@ -56,7 +55,7 @@ startblock("Body");
                 ?>
             </div>
             <form class="form-inline">
-                <button type="submit" name="clean" value="1" class="btn btn-danger">Limpiar</button>
+                <button type="submit" name="clean" value="1" class="btn btn-danger m-2 ml-3">Limpiar</button>
                 <button type="submit" name="buy" value="1" class="btn btn-info">Comprar</button>
             </form>
         </div>

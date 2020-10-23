@@ -37,11 +37,6 @@ class Carrito {
         }
     }
     
-    
-    function existenDatosEnSesion() {
-        return isset($_SESSION['cart']) && is_array($_SESSION['cart']);
-    }
-
     public function del($producto) {
         if(ControlSesion::SesionIniciada()){
             if(array_key_exists($producto,  $_SESSION["cart"])){
@@ -68,10 +63,11 @@ class Carrito {
     }
 
     //Fin Acciones Carrito
-
     public function crearTabla($conexion) {
-        echo '<table class="table table-bordered">'
-        . '<thead class="thead-light">
+        unset($_SESSION['cart'][0]);
+        if ($_SESSION['cart']) {
+            echo '<table class="table table-bordered">'
+            . '<thead class="thead-light">
                     <tr>
                       <th scope="col">Producto</th>
                       <th scope="col">Precio</th>
@@ -80,13 +76,13 @@ class Carrito {
                     </tr>
                     </thead>
                     <tbody>';
-        if($this->existenDatosEnSesion()){
-            unset($_SESSION['cart'][0]);
             foreach ($_SESSION['cart'] as $id => $cantidad) {
-                    $this->trProduct($conexion, $id, $cantidad);
+                $this->trProduct($conexion, $id, $cantidad);
             }
+            echo '</tbody></table>';
+        } else {
+            echo '<div class="alert alert-secondary" role="alert">Agrega algo al carrito</div>';
         }
-        echo '</tbody></table>';
     }
 
     private function trProduct($conexion, $id, $cantidad) {
